@@ -39,11 +39,11 @@ const AllRestaurant = ({ data }: { data: Array<TRestaurant> }) => {
             {/* toggle for small device  */}
             <button onClick={() => setToggle(!toggle)} className="flex items-center md:hidden my-4 bg-slate-800 text-white font-bold py-2 px-4 rounded">Categories<FaAngleDown className="ms-2"></FaAngleDown></button>
             {toggle &&
-                <div className="grid gap-2 grid-cols-3 my-4 text-center">
+                <div className="grid gap-2 grid-cols-3 my-4 text-center md:hidden">
                     {categories?.map((c: string, i: number) => <Category key={i} category={c} setDataByCategory={setDataByCategory} active={active}></Category>)}
                 </div>}
 
-              {/* show categories  */}
+            {/* show categories  */}
             <div className="hidden md:grid gap-8 grid-cols-4 lg:grid-cols-8 py-4 mb-10
             text-center border-b-2 border-slate-800">
                 {categories?.map((c: string, i: number) => <Category key={i} category={c} setDataByCategory={setDataByCategory} active={active}></Category>)}
