@@ -6,7 +6,7 @@ export type TRestaurant = {
 
 
 const useRestaurants = async () => {
-    const res = await fetch("https://nextjs-orpin-omega-98.vercel.app/api/restaurants", { cache: "no-store" })
+    const res = await fetch("https://nextjs-orpin-omega-98.vercel.app/api/restaurants", { cache: "force-cache" })
     const data: Array<TRestaurant> = await res.json();
     return data;
 };
